@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Sdk Name="Aspire.AppHost.Sdk" Version="9.0.0" />
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsAspireHost>true</IsAspireHost>
+    <TargetFramework>net9.0</TargetFramework>
+    <UserSecretsId>aspire-example-20250604</UserSecretsId>
+    <NoWarn>$(NoWarn);ASPIRE004</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" />
+    <PackageReference Include="CommunityToolkit.Aspire.Hosting.SqlDatabaseProjects" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebApp\WebApp.csproj" />
+    <ProjectReference Include="..\Database\Database.sqlproj" />
+  </ItemGroup>
+
+</Project>

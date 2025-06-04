@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build">
+  <Sdk Name="Microsoft.Build.Sql" Version="1.0.0" />
+  <PropertyGroup>
+    <Name>Database</Name>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <ModelCollation>1033, CI</ModelCollation>
+  </PropertyGroup>
+  <ItemGroup>
+    
+    <Build Remove="dbo.*.Insert.sql" />
+    <Build Remove="Scripts.PreDeployment.sql" />
+    <PostDeploy Include="Scripts.PostDeployment.sql" />
+  </ItemGroup>
+</Project>

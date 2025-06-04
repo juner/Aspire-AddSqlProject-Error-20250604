@@ -1,0 +1,15 @@
+<Project>
+    <ItemGroup Condition="'$(MSBuildProjectExtension)' == '.csproj'">
+        <PackageReference Update="Aspire.Hosting.AppHost" Version="9.3.0" />
+        <PackageReference Update="CommunityToolkit.Aspire.Hosting.SqlDatabaseProjects" Version="9.5.0" />
+        <PackageReference Update="Microsoft.Extensions.Http.Resilience" Version="9.5.0" />
+        <PackageReference Update="Microsoft.Extensions.ServiceDiscovery" Version="9.3.0" />
+        <PackageReference Update="Microsoft.Extensions.ServiceDiscovery.Yarp" Version="9.3.0" />
+        <PackageReference Update="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.12.0" />
+        <PackageReference Update="OpenTelemetry.Extensions.Hosting" Version="1.12.0" />
+        <PackageReference Update="OpenTelemetry.Instrumentation.AspNetCore" Version="1.12.0" />
+        <PackageReference Update="OpenTelemetry.Instrumentation.Http" Version="1.12.0" />
+        <PackageReference Update="OpenTelemetry.Instrumentation.Runtime" Version="1.12.0" />
+        <PackageReference Update="Swashbuckle.AspNetCore" Version="8.1.1" />
+    </ItemGroup>
+</Project>

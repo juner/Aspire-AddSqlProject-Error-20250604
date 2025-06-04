@@ -5,7 +5,6 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <IsAspireHost>true</IsAspireHost>
-    <TargetFramework>net9.0</TargetFramework>
     <UserSecretsId>aspire-example-20250604</UserSecretsId>
     <NoWarn>$(NoWarn);ASPIRE004</NoWarn>
   </PropertyGroup>

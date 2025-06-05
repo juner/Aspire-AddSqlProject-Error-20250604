@@ -109,3 +109,8 @@ info: Microsoft.Hosting.Lifetime[0]
 | net8.0                          | use                               | 10.0.100-preview.4.25258.110 | net8.0                         |  not running                 |
 | net9.0                          | use                               | 10.0.100-preview.4.25258.110 | net8.0                         |  running                     |
 | net10.0                         | use                               | 10.0.100-preview.4.25258.110 | net8.0                         |  running                     |
+
+# see also
+
+- issues
+   - [When using AddSqlProject in a .NET SDK 9 / .NET Aspire environment, building a csproj called from Aspire fails #712](https://github.com/CommunityToolkit/Aspire/issues/712)

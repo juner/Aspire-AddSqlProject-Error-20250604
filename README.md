@@ -97,3 +97,15 @@ info: Microsoft.Hosting.Lifetime[0]
 info: Microsoft.Hosting.Lifetime[0]
       Content root path: C:\Users\XXXXXX\WebApp
 ```
+
+## details (running / not running)
+
+| AppHost project TargetFramework | AppHost project use AddSqlProject | .NET SDK (dotnet --version) | WebApp project is running |
+| ------------------- | -------------------- | ---------- | ----------------------------- |
+| net8.0                   | use                        | 8.0.410 | running |
+| net8.0                   | use                       | 9.0.300 | not running |
+| net8.0                   | not use                | 9.0.300 | running |
+| net9.0                   | use                       | 9.0.300 | running |
+| net8.0                   | use                       | 10.0.100-preview.4.25258.110 | not running |
+| net9.0                   | use                       | 10.0.100-preview.4.25258.110 | running |
+| net10.0                   | use                       | 10.0.100-preview.4.25258.110 | running |

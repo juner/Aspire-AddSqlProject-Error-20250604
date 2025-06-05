@@ -100,13 +100,15 @@ info: Microsoft.Hosting.Lifetime[0]
 
 ## details (running / not running)
 
-| AppHost project TargetFramework | AppHost project use AddSqlProject | .NET SDK (dotnet --version)  | WebApp project TargetFramework | WebApp project is running    |
+use CommunityToolkit.Aspire.Hosting.SqlDatabaseProjects version:9.5.0.
+
+| `AppHost` project `TargetFramework` | `AppHost` project use `AddSqlProject` | .NET SDK ( `dotnet --version` )  | `WebApp` project `TargetFramework` | `WebApp` project is running    |
 | ------------------------------- | --------------------------------- | ---------------------------- | ------------------------------ | ---------------------------- |
 | net8.0                          | use                               | 8.0.410                      | net8.0                         | running                      |
 | net8.0                          | use                               | 9.0.300                      | net8.0                         |  **not running**             |
 | net8.0                          | **not use**                       | 9.0.300                      | net8.0                         |  running                     |
 | net9.0                          | use                               | 9.0.300                      | net8.0                         |  running                     |
-| net8.0                          | use                               | 10.0.100-preview.4.25258.110 | net8.0                         |  not running                 |
+| net8.0                          | use                               | 10.0.100-preview.4.25258.110 | net8.0                         |  **not running**             |
 | net9.0                          | use                               | 10.0.100-preview.4.25258.110 | net8.0                         |  running                     |
 | net10.0                         | use                               | 10.0.100-preview.4.25258.110 | net8.0                         |  running                     |
 

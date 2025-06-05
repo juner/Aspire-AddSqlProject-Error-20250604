@@ -4,7 +4,7 @@ When using AddSqlProject in a .NET SDK 9 / .NET Aspire environment, building a c
 
 ## error pattern
 
-.NET SDK 9 and run AddSqlProject
+.NET SDK 9 and AppHost TargetFramework net8.0 and run AddSqlProject
 
 ```
 dotnet new global.json --sdk-version 9.0.0 --roll-forward latestMinor --force
@@ -27,7 +27,7 @@ C:\Users\XXXXXX\WebApp\WebApp.csproj : error MSB4057: ターゲット "ComputeRu
 
 ## no error pattern 1
 
-.NET SDK 9 and not run AddSqlProject
+.NET SDK 9 and AppHost TargetFramework net8.0 and not run AddSqlProject
 
 ```
 dotnet new global.json --sdk-version 9.0.0 --roll-forward latestMinor --force
@@ -54,7 +54,7 @@ info: Microsoft.Hosting.Lifetime[0]
 
 ## no error pattern 2
 
-.NET SDK 8 and enable AddSqlProject
+.NET SDK 8 and AppHost TargetFramework net8.0 and run AddSqlProject
 
 ```
 dotnet new global.json --sdk-version 8.0.0 --roll-forward latestMinor --force
@@ -81,7 +81,7 @@ info: Microsoft.Hosting.Lifetime[0]
 
 ## no error pattern 3
 
-apphost project targetFramework net8.0 → net9.0 and .NET SDK 9 and run AddSqlProject
+apphost project TargetFramework net8.0 → net9.0 and .NET SDK 9 and run AddSqlProject
 
 ### webapp console log (4)
 
@@ -100,12 +100,12 @@ info: Microsoft.Hosting.Lifetime[0]
 
 ## details (running / not running)
 
-| AppHost project TargetFramework | AppHost project use AddSqlProject | .NET SDK (dotnet --version) | WebApp project is running |
-| ------------------- | -------------------- | ---------- | ----------------------------- |
-| net8.0                   | use                        | 8.0.410 | running |
-| net8.0                   | use                       | 9.0.300 | not running |
-| net8.0                   | not use                | 9.0.300 | running |
-| net9.0                   | use                       | 9.0.300 | running |
-| net8.0                   | use                       | 10.0.100-preview.4.25258.110 | not running |
-| net9.0                   | use                       | 10.0.100-preview.4.25258.110 | running |
-| net10.0                   | use                       | 10.0.100-preview.4.25258.110 | running |
+| AppHost project TargetFramework | AppHost project use AddSqlProject | .NET SDK (dotnet --version)  | WebApp project TargetFramework | WebApp project is running    |
+| ------------------------------- | --------------------------------- | ---------------------------- | ------------------------------ | ---------------------------- |
+| net8.0                          | use                               | 8.0.410                      | net8.0                         | running                      |
+| net8.0                          | use                               | 9.0.300                      | net8.0                         |  **not running**             |
+| net8.0                          | **not use**                       | 9.0.300                      | net8.0                         |  running                     |
+| net9.0                          | use                               | 9.0.300                      | net8.0                         |  running                     |
+| net8.0                          | use                               | 10.0.100-preview.4.25258.110 | net8.0                         |  not running                 |
+| net9.0                          | use                               | 10.0.100-preview.4.25258.110 | net8.0                         |  running                     |
+| net10.0                         | use                               | 10.0.100-preview.4.25258.110 | net8.0                         |  running                     |
